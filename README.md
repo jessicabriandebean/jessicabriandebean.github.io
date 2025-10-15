@@ -1,15 +1,16 @@
 # portfolio
-3-6 selected projects to showcase my skills, experience and education.
+3-6 selected projects to showcase skills, experience, and education.
+These projects are examples of actual, proprietary production.
 # 📁 Data Portfolio
 
 Welcome to my data science and analytics portfolio! Here you'll find projects in:
 
-- 📊 [Exploratory Data Analysis](./projects/eda)
-- 🤖 [Machine Learning](./projects/machine-learning)
-- 🧠 [Natural Language Processing](./projects/nlp)
-- 📈 [Data Visualization](./projects/visualization)
+- 📊 [Exploratory Data Analysis](./projects/DataMining)
+- 🤖 [Machine Learning](./projects/MachineLearning)
+- 🧠 [Natural Language Processing](./projects/NLP)
+- 📈 [Data Visualization](./projects/Dashboards)
 
-Each project includes:
+Each project summary includes:
 - Dataset overview
 - EDA and insights
 - Modeling and evaluation
