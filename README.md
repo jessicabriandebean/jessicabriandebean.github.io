@@ -17,6 +17,7 @@ Each project includes:
 - Technical stack
 
 ## 🔗 Connect
-- [LinkedIn](https://linkedin.com/in/yourname)
-- [Medium](https://medium.com/@yourname)
+- [LinkedIn](https://linkedin.com/in/jessicabbean)
+- [Medium](https://medium.com/@jessicabriandebean)
 - [Resume](./resume.pdf)
+
