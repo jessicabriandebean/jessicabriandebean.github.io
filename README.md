@@ -1,6 +1,6 @@
 # portfolio
 3-6 selected projects to showcase skills, experience, and education.
-These projects are examples of actual, proprietary production.
+These projects are examples of proprietary production. The steps and skills required are identical to actual projects. 
 # 📁 Data Portfolio
 
 Welcome to my data science and analytics portfolio! Here you'll find projects in:
