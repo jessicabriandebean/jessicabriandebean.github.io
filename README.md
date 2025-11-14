@@ -20,5 +20,5 @@ Each project summary includes:
 ## 🔗 Connect
 - [LinkedIn](https://linkedin.com/in/jessicabbean)
 - [Medium](https://medium.com/@jessicabriandebean)
-- [Resume](./Jessica Bean_2025_Resume.pdf)
+- [Resume](Jessica Bean_2025_Resume.pdf)
 
