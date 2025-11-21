@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Data Scientist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: #ffffff;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #2d3748;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: #4a5568;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            color: #667eea;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8rem 2rem 6rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .hero h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+            opacity: 0.95;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.875rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            padding: 5rem 2rem;
+        }
+        
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2d3748;
+            font-weight: 700;
+        }
+        
+        section .subtitle {
+            color: #718096;
+            margin-bottom: 3rem;
+            font-size: 1.25rem;
+        }
+        
+        /* About Section */
+        #about {
+            background: #f7fafc;
+        }
+        
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            transition: all 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+        
+        .project-content {
+            padding: 2rem;
+        }
+        
+        .project-card h3 {
+            color: #2d3748;
+            margin-bottom: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .project-tech {
+            color: #718096;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .project-description {
+            color: #4a5568;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .project-metrics {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .metric {
+            background: #edf2f7;
+            color: #2d3748;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        
+        .project-link {
+            padding: 0.625rem 1.25rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .link-demo {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .link-demo:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        .link-code {
+            background: #2d3748;
+            color: white;
+        }
+        
+        .link-code:hover {
+            background: #1a202c;
+        }
+        
+        .link-blog {
+            background: #edf2f7;
+            color: #2d3748;
+        }
+        
+        .link-blog:hover {
+            background: #e2e8f0;
+        }
+        
+        /* Blog Section */
+        #blog {
+            background: #f7fafc;
+        }
+        
+        .blog-grid {
+            display: grid;
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .blog-post {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: all 0.3s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .blog-post:hover {
+            transform: translateX(8px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .blog-post h3 {
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .blog-post h3 a {
+            color: #2d3748;
+            text-decoration: none;
+        }
+        
+        .blog-post h3 a:hover {
+            color: #667eea;
+        }
+        
+        .blog-meta {
+            color: #718096;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .blog-excerpt {
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        
+        /* Skills Section */
+        #skills {
+            background: white;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .skill-category {
+            background: #f7fafc;
+            padding: 2rem;
+            border-radius: 8px;
+            border-top: 4px solid #667eea;
+        }
+        
+        .skill-category h3 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .skill-tag {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #4a5568;
+            border: 1px solid #e2e8f0;
+        }
+        
+        /* Contact Section */
+        #contact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        #contact h2 {
+            color: white;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .contact-link {
+            color: white;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 6px;
+        }
+        
+        .contact-link:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: #cbd5e0;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.25rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Your Name</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Your Name</h1>
+        <h2>Data Scientist</h2>
+        <p>Transforming complex data into actionable insights | Federal Government → Private Sector</p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="resume.pdf" class="btn btn-secondary">Download Resume</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p class="subtitle">From Public Service to Private Innovation</p>
+            <div class="about-content">
+                <p>I'm a data scientist with <strong>[X] years of experience</strong> leveraging advanced analytics and machine learning to drive decision-making in the federal government. My work has directly impacted millions of people through data-driven policy recommendations and operational improvements.</p>
+                
+                <p>Now, I'm transitioning to the private sector to apply my expertise in <strong>economics, finance, marketing analytics, and ethical AI</strong> to solve complex business challenges. I bring a unique perspective shaped by working with massive datasets, ensuring regulatory compliance, and translating technical insights for diverse audiences.</p>
+                
+                <p><strong>What drives me:</strong> The intersection of rigorous analysis and real-world impact. Whether forecasting economic trends or optimizing investment portfolios, I'm passionate about building data solutions that create measurable value.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <p class="subtitle">End-to-end data science solutions showcasing technical depth and business impact</p>
+            
+            <div class="projects-grid">
+                <!-- Project 1: Economic Forecasting -->
+                <div class="project-card">
+                    <div class="project-image">📈</div>
+                    <div class="project-content">
+                        <h3>Economic Indicator Forecasting</h3>
+                        <p class="project-tech">Python • Prophet • Streamlit • FRED API • Time Series</p>
+                        <p class="project-description">
+                            Interactive platform forecasting unemployment, inflation, and GDP using multiple time series models. Automated data pipeline with real-time visualizations and model comparison.
+                        </p>
+                        <div class="project-metrics">
+                            <span class="metric">2.3% MAPE</span>
+                            <span class="metric">3 Models</span>
+                            <span class="metric">30 Years Data</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://economic-forecast.streamlit.app" class="project-link link-demo">
+                                🔗 Live Demo
+                            </a>
+                            <a href="https://github.com/yourusername/economic-forecasting" class="project-link link-code">
+                                💻 Code
+                            </a>
+                            <a href="blog/economic-forecasting.html" class="project-link link-blog">
+                                📄 Article
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Portfolio Optimization -->
+                <div class="project-card">
+                    <div class="project-image">💼</div>
+                    <div class="project-content">
+                        <h3>S&P 500 Portfolio Optimization</h3>
+                        <p class="project-tech">Python • PyPortfolioOpt • Modern Portfolio Theory • Risk Analysis</p>
+                        <p class="project-description">
+                            Advanced portfolio optimization platform implementing multiple algorithms (Max Sharpe, Black-Litterman, Risk Parity) with comprehensive risk metrics and backtesting.
+                        </p>
+                        <div class="project-metrics">
+                            <span class="metric">1.24 Sharpe</span>
+                            <span class="metric">4 Strategies</span>
+                            <span class="metric">500 Stocks</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://portfolio-optimizer.streamlit.app" class="project-link link-demo">
+                                🔗 Live Demo
+                            </a>
+                            <a href="https://github.com/yourusername/portfolio-optimization" class="project-link link-code">
+                                💻 Code
+                            </a>
+                            <a href="blog/portfolio-optimization.html" class="project-link link-blog">
+                                📄 Article
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Bias Detection -->
+                <div class="project-card">
+                    <div class="project-image">⚖️</div>
+                    <div class="project-content">
+                        <h3>Algorithmic Bias Detection Toolkit</h3>
+                        <p class="project-tech">Python • Fairlearn • Scikit-learn • FastAPI • ML Ethics</p>
+                        <p class="project-description">
+                            Open-source toolkit identifying and mitigating bias in ML models. Implements 8 fairness metrics with automated reporting and remediation suggestions deployed as REST API.
+                        </p>
+                        <div class="project-metrics">
+                            <span class="metric">8 Metrics</span>
+                            <span class="metric">REST API</span>
+                            <span class="metric">Open Source</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://bias-detection-docs.netlify.app" class="project-link link-demo">
+                                🔗 Documentation
+                            </a>
+                            <a href="https://github.com/yourusername/bias-detection" class="project-link link-code">
+                                💻 Code
+                            </a>
+                            <a href="blog/bias-detection.html" class="project-link link-blog">
+                                📄 Article
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <div class="container">
+            <h2>Blog & Technical Writing</h2>
+            <p class="subtitle">Deep dives into data science projects, methodologies, and career insights</p>
+            
+            <div class="blog-grid">
+                <div class="blog-post">
+                    <h3><a href="blog/economic-forecasting.html">Building an Economic Forecasting Platform: A Data Science Journey</a></h3>
+                    <p class="blog-meta">15 min read • Data Science, Time Series, Python</p>
+                    <p class="blog-excerpt">
+                        How I built an automated forecasting system for economic indicators using Prophet, ARIMA, and LSTM. Includes data pipeline design, model selection methodology, and deployment strategies.
+                    </p>
+                </div>
+
+                <div class="blog-post">
+                    <h3><a href="blog/portfolio-optimization.html">Modern Portfolio Theory in Practice: Optimizing S&P 500 Portfolios</a></h3>
+                    <p class="blog-meta">12 min read • Finance, Optimization, Python</p>
+                    <p class="blog-excerpt">
+                        Deep dive into implementing multiple portfolio optimization algorithms. Learn about the efficient frontier, risk parity, Black-Litterman model, and walk-forward backtesting.
+                    </p>
+                </div>
+
+                <div class="blog-post">
+                    <h3><a href="blog/federal-to-private.html">Transitioning from Federal Government to Private Sector Data Science</a></h3>
+                    <p class="blog-meta">8 min read • Career, Transition, Advice</p>
+                    <p class="blog-excerpt">
+                        Lessons learned from transitioning out of government. How to position your experience, build a portfolio, and prepare for interviews in the private sector.
+                    </p>
+                </div>
+
+                <div class="blog-post">
+                    <h3><a href="blog/bias-in-ml.html">Detecting and Mitigating Algorithmic Bias: A Practical Guide</a></h3>
+                    <p class="blog-meta">10 min read • ML Ethics, Fairness, Python</p>
+                    <p class="blog-excerpt">
+                        Building tools to ensure fairness in machine learning models. Covers fairness metrics, evaluation techniques, and practical implementation with Fairlearn.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <p class="subtitle">Full-stack data science with emphasis on production-ready solutions</p>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming & Data</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">XGBoost</span>
+                        <span class="skill-tag">Prophet</span>
+                        <span class="skill-tag">NLP</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Visualization & Deployment</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Plotly</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">D3.js</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Domain Expertise</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Economics</span>
+                        <span class="skill-tag">Finance</span>
+                        <span class="skill-tag">Marketing Analytics</span>
+                        <span class="skill-tag">AI Ethics</span>
+                        <span class="skill-tag">Time Series</span>
+                        <span class="skill-tag">A/B Testing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <p class="subtitle">Open to data science roles in finance, marketing, consulting, and tech</p>
+            
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com" class="contact-link">
+                    📧 Email
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" class="contact-link" target="_blank">
+                    💼 LinkedIn
+                </a>
+                <a href="https://github.com/yourusername" class="contact-link" target="_blank">
+                    💻 GitHub
+                </a>
+                <a href="resume.pdf" class="contact-link" target="_blank">
+                    📄 Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Your Name. Built with passion for data and deployed with GitHub Pages.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Data Scientist | Python | Machine Learning | Portfolio Optimization</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Add scroll effect to nav
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                nav.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+            } else {
+                nav.style.boxShadow = '0 1px 3px rgba(0,0,0,0.05)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
