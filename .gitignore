@@ -13,11 +13,11 @@ env/
 *.ipynb_checkpoints/
 
 # Data files
-data/raw/*
-!data/raw/.gitkeep
-*.csv
-*.xlsx
-*.pkl
+#data/raw/*
+#!data/raw/.gitkeep
+#*.csv
+#*.xlsx
+#*.pkl
 
 # Models
 models/*.pkl
