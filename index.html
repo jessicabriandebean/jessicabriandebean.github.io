@@ -168,13 +168,26 @@
             background: #f7fafc;
         }
         
-        .about-content {
-            max-width: 900px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.8;
+        /* About Section */
+        #about {
+            background: white;
         }
         
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .profile-img {
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
         .about-content p {
             margin-bottom: 1.5rem;
         }
@@ -493,6 +506,8 @@
             <h2>About Me</h2>
             <p class="subtitle">From Public Service to Private Innovation</p>
             <div class="about-content">
+                <img src="https://via.placeholder.com/300" alt="Your Name" class="profile-img">
+                <div>
                 <p>I'm a data scientist with <strong>[X] years of experience</strong> leveraging advanced analytics and machine learning to drive decision-making in the federal government. My work has directly impacted millions of people through data-driven policy recommendations and operational improvements.</p>
                 
                 <p>Now, I'm transitioning to the private sector to apply my expertise in <strong>economics, finance, marketing analytics, and ethical AI</strong> to solve complex business challenges. I bring a unique perspective shaped by working with massive datasets, ensuring regulatory compliance, and translating technical insights for diverse audiences.</p>
