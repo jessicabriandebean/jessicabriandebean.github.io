@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -77,57 +78,47 @@ elif data_source == "Use FRED API":
     api_key = st.sidebar.text_input("Enter FRED API Key:", type="password")
     
     if api_key:
+        from fredapi import Fred
+        fred = Fred(api_key=api_key)
         st.sidebar.success("✓ API Key provided")
         st.sidebar.markdown("Get your free API key at [FRED](https://fred.stlouisfed.org/docs/api/api_key.html)")
-        
-        import streamlit as st
-import pandas as pd
-import json
-from fredapi import Fred
 
-st.title("📊 FRED Data Explorer")
+        # --- Choose source type for series list ---
+        source_type = st.sidebar.radio("Select series source:", ["JSON", "CSV"])
 
-api_key = st.text_input("Enter your FRED API key:", type="password")
+        if source_type == "JSON":
+            import json
+            with open("fred_series.json", "r") as f:
+                available_series = json.load(f)
+        else:  # CSV
+            df_series = pd.read_csv("fred_series.csv")
+            available_series = dict(zip(df_series["Label"], df_series["SeriesID"]))
 
-if api_key:
-    fred = Fred(api_key=api_key)
+        # --- Multiselect dropdown for series ---
+        selected_labels = st.sidebar.multiselect(
+            "Select FRED data fields:",
+            options=list(available_series.keys()),
+            default=[]
+        )
 
-    # --- Choose source file type ---
-    source_type = st.radio("Select source type:", ["JSON", "CSV"])
+        if selected_labels:
+            data_dict = {}
+            for label in selected_labels:
+                series_id = available_series[label]
+                st.write(f"Fetching {label} ({series_id})...")
+                data_dict[label] = fred.get_series(series_id)
 
-    if source_type == "JSON":
-        # Load JSON file
-        with open("fred_series.json", "r") as f:
-            available_series = json.load(f)
+            # Combine into DataFrame
+            df = pd.DataFrame(data_dict)
+            df.index = pd.to_datetime(df.index)
+            df.reset_index(inplace=True)
+            df.rename(columns={"index": "Date"}, inplace=True)
 
-    else:  # CSV
-        df = pd.read_csv("fred_series.csv")
-        available_series = dict(zip(df["Label"], df["SeriesID"]))
-
-    # --- Dropdown for selecting multiple series ---
-    selected_labels = st.multiselect(
-        "Select FRED data fields:",
-        options=list(available_series.keys()),
-        default=[]
-    )
-
-    if selected_labels:
-        data_dict = {}
-        for label in selected_labels:
-            series_id = available_series[label]
-            st.write(f"Fetching {label} ({series_id})...")
-            data_dict[label] = fred.get_series(series_id)
-
-        # Combine into DataFrame
-        df = pd.DataFrame(data_dict)
-        st.write("✅ Data successfully loaded!")
-        st.dataframe(df.tail(10))
-
-        # Plot
-        st.line_chart(df)
+            st.success("✅ FRED data successfully loaded")
+            st.dataframe(df.tail(10))
     else:
         st.sidebar.info("Need a FRED API key? [Get one here](https://fred.stlouisfed.org/docs/api/api_key.html)")
-
+        
 elif data_source == "Sample Data":
     df = generate_sample_data()
     st.sidebar.success("✓ Sample data loaded")
