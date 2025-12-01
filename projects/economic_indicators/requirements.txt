@@ -10,4 +10,6 @@ scikit-learn==1.3.0
 tensorflow==2.13.0
 fredapi==0.5.1
 yfinance==0.2.66
+setuptools
+wheel
 
