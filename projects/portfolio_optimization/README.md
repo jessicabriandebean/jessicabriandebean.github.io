@@ -5,7 +5,7 @@
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
 <p align="center">
-  <img src="results/images/efficient_frontier.png" alt="Efficient Frontier" width="700"/>
+  <img src="results/images/efficient_frontier.html" alt="Efficient Frontier" width="700"/>
 </p>
 
 ## 🎯 Project Overview
