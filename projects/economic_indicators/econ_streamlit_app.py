@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime, timedelta
+from fredapi import Fred
 
 # Page configuration
 st.set_page_config(
@@ -79,8 +80,51 @@ elif data_source == "Use FRED API":
         st.sidebar.success("✓ API Key provided")
         st.sidebar.markdown("Get your free API key at [FRED](https://fred.stlouisfed.org/docs/api/api_key.html)")
         
-        # Add FRED data fetching code here
-        st.info("📝 FRED API integration: Install `fredapi` package and implement data fetching")
+        import streamlit as st
+import pandas as pd
+import json
+from fredapi import Fred
+
+st.title("📊 FRED Data Explorer")
+
+api_key = st.text_input("Enter your FRED API key:", type="password")
+
+if api_key:
+    fred = Fred(api_key=api_key)
+
+    # --- Choose source file type ---
+    source_type = st.radio("Select source type:", ["JSON", "CSV"])
+
+    if source_type == "JSON":
+        # Load JSON file
+        with open("fred_series.json", "r") as f:
+            available_series = json.load(f)
+
+    else:  # CSV
+        df = pd.read_csv("fred_series.csv")
+        available_series = dict(zip(df["Label"], df["SeriesID"]))
+
+    # --- Dropdown for selecting multiple series ---
+    selected_labels = st.multiselect(
+        "Select FRED data fields:",
+        options=list(available_series.keys()),
+        default=[]
+    )
+
+    if selected_labels:
+        data_dict = {}
+        for label in selected_labels:
+            series_id = available_series[label]
+            st.write(f"Fetching {label} ({series_id})...")
+            data_dict[label] = fred.get_series(series_id)
+
+        # Combine into DataFrame
+        df = pd.DataFrame(data_dict)
+        st.write("✅ Data successfully loaded!")
+        st.dataframe(df.tail(10))
+
+        # Plot
+        st.line_chart(df)
     else:
         st.sidebar.info("Need a FRED API key? [Get one here](https://fred.stlouisfed.org/docs/api/api_key.html)")
 
