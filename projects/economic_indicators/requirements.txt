@@ -8,3 +8,4 @@ seaborn==0.13.2
 statsmodels==0.14.2
 setuptools==75.1.0
 wheel==0.44.0
+dash==80.9.0
