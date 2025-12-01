@@ -5,7 +5,7 @@
 ![Status](https://img.shields.io/badge/status-active-success.svg)
 
 <p align="center">
-  <img src="results/images/efficient_frontier.html" alt="Efficient Frontier" width="700"/>
+  <img src="results/images/efficient_frontier.png" alt="Efficient Frontier" width="700"/>
 </p>
 
 ## 🎯 Project Overview
@@ -16,7 +16,7 @@ Advanced portfolio optimization platform implementing **Modern Portfolio Theory*
 
 **🔗 Live Demo:** [Coming Soon - Streamlit Deployment]
 
-**📄 Detailed Article:** [Portfolio Optimization Deep Dive](https://yourusername.github.io/blog/portfolio-optimization.html)
+**📄 Detailed Article:** [Portfolio Optimization Deep Dive](https://github.com/jessicabriandebean/porftfolio.github.io/blob/main/blog/portfolio_optimization.html)
 
 ---
 
@@ -327,7 +327,7 @@ Comparison of different portfolio strategies vs S&P 500 benchmark over 5-year pe
 
 ### Drawdown Analysis
 <p align="center">
-  <img src="results/images/drawdown_analysis.png" alt="Drawdown" width="600"/>
+  <img src="[results/images/drawdown_analysis.png](https://github.com/jessicabriandebean/porftfolio.github.io/blob/main/projects/portfolio_optimization/results/images/portfolio_drawdown.png)" alt="Drawdown" width="600"/>
 </p>
 
 Maximum drawdown periods showing portfolio resilience during market downturns.
@@ -401,7 +401,7 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 Read the detailed project walkthrough with methodology, code explanations, and insights:
 
-**[Building an S&P 500 Portfolio Optimizer: Modern Portfolio Theory in Practice](https://yourusername.github.io/blog/portfolio-optimization.html)**
+**[Building an S&P 500 Portfolio Optimizer: Modern Portfolio Theory in Practice](https://github.com/jessicabriandebean/porftfolio.github.io/blob/main/blog/portfolio_optimization.html)**
 
 Topics covered:
 - Why portfolio optimization matters
@@ -422,10 +422,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Your Name**
 
-- 🌐 Portfolio: [yourusername.github.io](https://yourusername.github.io)
-- 💼 LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
+- 🌐 Portfolio: [portfolio.github.io](https://github.com/jessicabriandebean/porftfolio.github.io/tree/main)
+- 💼 LinkedIn: [linkedin.com/in/yourprofile](www.linkedin.com/in/jessicabbean)
 - 📧 Email: your.email@example.com
-- 🐙 GitHub: [@yourusername](https://github.com/yourusername)
+- 🐙 GitHub: [@jessicabrindebean](https://github.com/jessicabriandebean)
 
 ---
 
@@ -454,7 +454,7 @@ If you have questions or need help:
 
 1. Check the [Issues](https://github.com/yourusername/portfolio-optimization/issues) page
 2. Read the [Documentation](docs/)
-3. Contact me via [email](mailto:your.email@example.com)
+3. Contact me via [email](mailto:jessicabbean@gmail.com)
 
 ---
 
