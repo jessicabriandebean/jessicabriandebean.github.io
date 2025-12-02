@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 <p align="center">
-  <img src="results/images/dashboard_screenshot.png" alt="Dashboard Screenshot" width="700"/>
+  <img src="[results/images/dashboard_screenshot.png](https://github.com/jessicabriandebean/porftfolio.github.io/blob/main/projects/economic_indicators/results/images/Econ_app_image.png)" alt="Dashboard Screenshot" width="700"/>
 </p>
 
 ## 🎯 Project Overview
