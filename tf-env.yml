@@ -1,0 +1,9 @@
+name: tf-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy=1.26.4
+  - pip
+  - pip:
+      - tensorflow==2.20.0
