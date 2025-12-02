@@ -327,7 +327,7 @@ Comparison of different portfolio strategies vs S&P 500 benchmark over 5-year pe
 
 ### Drawdown Analysis
 <p align="center">
-  <img src="[results/images/drawdown_analysis.png](https://github.com/jessicabriandebean/porftfolio.github.io/blob/main/projects/portfolio_optimization/results/images/portfolio_drawdown.png)" alt="Drawdown" width="600"/>
+  <img src="results/images/portfolio_drawdown.png" alt="Drawdown" width="600"/>
 </p>
 
 Maximum drawdown periods showing portfolio resilience during market downturns.
