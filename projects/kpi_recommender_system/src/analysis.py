@@ -11,6 +11,20 @@
 # %% [markdown]
 # ## 1. Setup and Imports
 
+import sys
+import os
+
+# Add parent directory (kpi_recommender_system folder) to path
+sys.path.insert(0, os.path.abspath('/Users/jessicabean/Library/CloudStorage/OneDrive-Personal/porftfolio.github.io/projects/kpi_recommender_system/notebooks'))
+
+# Now import
+from kpi_recommender_system import KPIRecommender
+
+recommender = KPIRecommender()
+df_kpis = recommender.load_kpi_database()
+
+print(f"✅ Loaded {len(df_kpis)} KPIs successfully!")
+
 # %%
 import pandas as pd
 import numpy as np
