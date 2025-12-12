@@ -1,41 +1,15 @@
-
-fredapi==0.5.1
-yfinance==0.2.66
-
+streamlit==1.28.0
 plotly==5.24.1
-fredapi==0.5.1
+pandas==2.0.3
+numpy>=1.24.3
+scikit-learn==1.5.2
+statsmodels==0.14.2
 scipy==1.14.1
 seaborn==0.13.2
-statsmodels==0.14.2
-setuptools==75.1.0
-wheel==0.44.0
-prophet==1.2.1
-scikit-learn==1.5.2
-tensorflow==2.15.0
-
-# Core dependencies
-pandas==2.0.3
-numpy >1.24.3
-
-# Visualization
 matplotlib==3.7.2
-
-
-# Web application
-streamlit==1.28.0
-
-# Jupyter notebook
-jupyter==1.0.0
-notebook==7.0.3
-ipykernel==6.25.2
-
-# Testing
-pytest==7.4.2
-pytest-cov==4.1.0
-
-# Network graphs
+yfinance==0.2.66
+fredapi==0.5.1
 networkx==3.1
-
-# Optional but recommended
 python-dotenv==1.0.0
-
+prophet==1.2.1
+tensorflow==2.15.0
