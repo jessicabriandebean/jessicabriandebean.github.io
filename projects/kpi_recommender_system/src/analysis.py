@@ -37,7 +37,7 @@ print("✅ Libraries imported successfully")
 
 # %%
 # Load the KPI database
-from projects.kpi_recommender_system.kpi_recommender_system import KPIRecommender
+from kpi_recommender_system import KPIRecommender
 
 recommender = KPIRecommender()
 df_kpis = recommender.load_kpi_database()

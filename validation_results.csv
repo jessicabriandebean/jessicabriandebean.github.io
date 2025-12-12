@@ -1,0 +1,13 @@
+test_case,kpi_name,rank,industry_match,department_match,score
+1,Return on Ad Spend (ROAS),1,True,True,0.6021712513389973
+1,Customer Acquisition Cost (CAC),2,True,True,0.4751022467332729
+1,Conversion Rate,3,True,True,0.44938718916770565
+2,Monthly Recurring Revenue (MRR),1,True,True,0.5635490059308693
+2,Customer Churn Rate,2,True,True,0.515513001903708
+2,Same-Store Sales Growth,3,False,True,0.32904125708155385
+3,Bed Occupancy Rate,1,True,True,0.5232732759091212
+3,Patient Wait Time,2,True,True,0.47499792010913183
+3,Inventory Turnover,3,False,True,0.39414768105021797
+4,Same-Store Sales Growth,1,True,True,0.5995070851489761
+4,Monthly Recurring Revenue (MRR),2,False,True,0.3008591923369277
+4,Customer Churn Rate,3,False,True,0.285724911578427

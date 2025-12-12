@@ -1,0 +1,13 @@
+test_case,industry,department,rank,kpi_name,similarity_score,priority
+1,E-commerce,Marketing,1,Return on Ad Spend (ROAS),0.6021712513389973,High
+1,E-commerce,Marketing,2,Customer Acquisition Cost (CAC),0.4751022467332729,High
+1,E-commerce,Marketing,3,Conversion Rate,0.44938718916770565,High
+2,SaaS,Sales,1,Monthly Recurring Revenue (MRR),0.5635490059308693,High
+2,SaaS,Sales,2,Customer Churn Rate,0.515513001903708,High
+2,SaaS,Sales,3,Same-Store Sales Growth,0.32904125708155385,High
+3,Healthcare,Operations,1,Bed Occupancy Rate,0.5232732759091212,High
+3,Healthcare,Operations,2,Patient Wait Time,0.47499792010913183,High
+3,Healthcare,Operations,3,Inventory Turnover,0.39414768105021797,High
+4,Retail,Sales,1,Same-Store Sales Growth,0.5995070851489761,High
+4,Retail,Sales,2,Monthly Recurring Revenue (MRR),0.3008591923369277,High
+4,Retail,Sales,3,Customer Churn Rate,0.285724911578427,High
