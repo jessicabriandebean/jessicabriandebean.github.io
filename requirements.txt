@@ -11,3 +11,18 @@ tensorflow==2.13.0
 fredapi==0.5.1
 yfinance==0.2.66
 
+streamlit==1.28.0
+pandas==2.2.2
+plotly==5.24.1
+fredapi==0.5.1
+nnumpy >1.24.3
+scipy==1.14.1
+seaborn==0.13.2
+statsmodels==0.14.2
+setuptools==75.1.0
+wheel==0.44.0
+prophet==1.2.1
+scikit-learn==1.5.2
+matplotlib==3.10.0
+tensorflow==2.15.0
+
