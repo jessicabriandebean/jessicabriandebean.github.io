@@ -139,8 +139,8 @@ economic-forecasting/
 
 <table>
   <tr>
-    <td><img src="results/images/forecast_comparison.png" alt="Forecast Comparison" width="400"/></td>
-    <td><img src="results/images/model_performance.png" alt="Model Performance" width="400"/></td>
+    <td><img src="results/images/plot comparison.png" alt="Forecast Comparison" width="400"/></td>
+    <td><img src="results/images/model comparison.png" alt="Model Performance" width="400"/></td>
   </tr>
   <tr>
     <td align="center"><i>Model Comparison</i></td>
