@@ -5,14 +5,14 @@
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 <p align="center">
-  <img src="results/images/Econ_app_image.png" alt="Dashboard Screenshot" width="700"/>
+  <img src="results/images/econ_app_dashboard.png" alt="Dashboard Screenshot" width="700"/>
 </p>
 
 ## 🎯 Project Overview
 
 Interactive forecasting platform for US economic indicators (unemployment, inflation, GDP) using time series analysis and machine learning. Achieved **2.3% MAPE** on unemployment predictions.
 
-**🔗 Live Demo:** [https://economic-forecast-app.streamlit.app](https://economic-forecast-app.streamlit.app)
+**🔗 Live Demo:** [https://econ-indicators.streamlit.app](https://econ-indicators.streamlit.app)
 
 ## ✨ Key Features
 
@@ -179,9 +179,9 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 ## 👤 Author
 
 **Your Name**
-- Portfolio: [yourusername.github.io](https://yourusername.github.io)
-- LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
+- Portfolio: [https://jessicabriandebean.github.io/](https://jessicabriandebean.github.io/)
+- LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/jessicabbean)
+- Email: jessicabbean@gmail.com
 
 ## 🙏 Acknowledgments
 
