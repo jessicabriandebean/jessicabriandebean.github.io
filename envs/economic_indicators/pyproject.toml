@@ -1,0 +1,23 @@
+[project]
+name = "economic_indicators"
+version = "0.1.0"
+requires-python = "==3.11.*"
+description = "Economic Indicators Dashboard"
+readme = false
+
+dependencies = [
+    "streamlit==1.31.0",
+    "pandas==2.2.0",
+    "plotly==5.18.0",
+    "fredapi==0.5.1",
+    "python-dateutil==2.9.0",
+    "requests==2.31.0",
+    "pyarrow==14.0.2",
+    "numpy==1.26.4"
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest",
+    "ipykernel"
+]

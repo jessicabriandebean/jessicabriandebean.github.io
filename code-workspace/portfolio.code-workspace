@@ -1,0 +1,32 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    // Default interpreter (fallback)
+    "python.defaultInterpreterPath": "envs/economic_indicators/.venv/bin/python",
+    // Per‑project interpreter overrides
+    "python.envFile": "${workspaceFolder}/.env",
+    "python.workspaceSymbols.enabled": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.terminal.activateEnvironment": true,
+    // Notebook kernel mapping
+    "jupyter.kernels.excludePythonEnvironments": false,
+    "jupyter.kernels.filter": [
+      "envs/economic_indicators",
+      "envs/kpi_recommender_system",
+      "envs/portfolio_optimization",
+      "envs/product_analytics"
+    ],
+    // Docker integration
+    "docker.dockerComposeBuild": true,
+    "docker.showExplorer": true,
+    // Formatting
+    "editor.formatOnSave": true,
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.black-formatter"
+    }
+  }
+}

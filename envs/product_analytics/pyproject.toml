@@ -1,0 +1,19 @@
+[project]
+name = "product_analytics"
+version = "0.1.0"
+requires-python = "==3.11.*"
+description = "Product analytics dashboards and analysis"
+readme = false
+
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "plotly>=5.0",
+    "pyarrow",
+    "streamlit>=1.31",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest",
+]

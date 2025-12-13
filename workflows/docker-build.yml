@@ -1,0 +1,25 @@
+name: Build Project Docker Images
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        project: [economic_indicators, kpi_recommender_system, portfolio_optimization, product_analytics]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: |
+          docker build \
+            -f projects/${{ matrix.project }}/Dockerfile \
+            -t portfolio/${{ matrix.project }}:latest \
+            projects/${{ matrix.project }}
+#adjust image naming (portfolio/...) to match Docker Hub or GHCR later

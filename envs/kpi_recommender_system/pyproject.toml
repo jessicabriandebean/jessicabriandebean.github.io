@@ -1,0 +1,19 @@
+[project]
+name = "kpi_recommender_system"
+version = "0.1.0"
+requires-python = "==3.11.*"
+description = "KPI recommender system app"
+readme = false
+
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "scikit-learn>=1.4",
+    "pyarrow",
+    "streamlit>=1.31",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "pytest",
+]
