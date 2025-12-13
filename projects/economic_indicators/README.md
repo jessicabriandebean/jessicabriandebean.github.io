@@ -178,8 +178,8 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file for
 
 ## 👤 Author
 
-**Your Name**
-- Portfolio: [https://jessicabriandebean.github.io/](https://jessicabriandebean.github.io/)
+**Jessica Bean**
+- Portfolio: [[https://github.com/jessicabriandebean/jessicabriandebean.github.io](https://github.com/jessicabriandebean/jessicabriandebean.github.io)
 - LinkedIn: [linkedin.com/in/jessicabbean](https://linkedin.com/in/jessicabbean)
 - Email: jessicabbean@gmail.com
 
