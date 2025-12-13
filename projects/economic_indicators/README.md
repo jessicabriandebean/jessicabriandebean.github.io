@@ -140,7 +140,7 @@ economic-forecasting/
 <table>
   <tr>
     <td><img src="results/images/plot comparison.png" alt="Forecast Comparison" width="400"/></td>
-    <td><img src="results/images/model comparison.png" alt="Model Performance" width="400"/></td>
+    <td><img src="results/images/model comparision.png" alt="Model Performance" width="400"/></td>
   </tr>
   <tr>
     <td align="center"><i>Model Comparison</i></td>
