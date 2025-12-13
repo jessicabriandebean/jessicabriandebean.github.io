@@ -401,7 +401,7 @@ Contributions are welcome! Please feel free to submit a Pull Request. For major 
 
 Read the detailed project walkthrough with methodology, code explanations, and insights:
 
-**[Building an S&P 500 Portfolio Optimizer: Modern Portfolio Theory in Practice](https://github.com/jessicabriandebean/porftfolio.github.io/blob/main/blog/portfolio_optimization.html)**
+**[Building an S&P 500 Portfolio Optimizer: Modern Portfolio Theory in Practice](https://github.com/jessicabriandebean/jessicabriandebean.github.io/blob/main/blog/portfolio_optimization.html)**
 
 Topics covered:
 - Why portfolio optimization matters
@@ -422,9 +422,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Your Name**
 
-- 🌐 Portfolio: [portfolio.github.io](https://github.com/jessicabriandebean/porftfolio.github.io/tree/main)
+- 🌐 Portfolio: [portfolio.github.io]((https://github.com/jessicabriandebean/jessicabriandebean.github.io))
 - 💼 LinkedIn: [linkedin.com/in/yourprofile](www.linkedin.com/in/jessicabbean)
-- 📧 Email: your.email@example.com
+- 📧 Email: jessicabbean@gmail.com
 - 🐙 GitHub: [@jessicabrindebean](https://github.com/jessicabriandebean)
 
 ---
@@ -462,10 +462,10 @@ If you have questions or need help:
 
 If you find this project helpful, please consider giving it a star! It helps others discover the project.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/portfolio-optimization&type=Date)](https://star-history.com/#yourusername/portfolio-optimization&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=jessicabriandebean/portfolio_optimization&type=Date)
 
 ---
 
 **⭐ If this project helped you, please star it on GitHub! ⭐**
 
-*Last updated: November 2024*
+*Last updated: December 2025*
