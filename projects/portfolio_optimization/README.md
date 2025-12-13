@@ -313,14 +313,14 @@ Shows the optimal portfolios (blue line) with maximum return for each level of r
 
 ### Portfolio Allocation
 <p align="center">
-  <img src="results/images/holdings_pie.png" alt="Holdings" width="600"/>
+  <img src="results/images/max_sharpe_holdings.png" alt="Holdings" width="600"/>
 </p>
 
 Top 15 holdings representing concentrated positions while maintaining diversification across sectors.
 
 ### Cumulative Performance
 <p align="center">
-  <img src="results/images/performance_comparison.png" alt="Performance" width="600"/>
+  <img src="results/images/model_comparison.png" alt="Performance" width="600"/>
 </p>
 
 Comparison of different portfolio strategies vs S&P 500 benchmark over 5-year period.
@@ -452,7 +452,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you have questions or need help:
 
-1. Check the [Issues](https://github.com/yourusername/portfolio-optimization/issues) page
+1. Check the [Issues](https://github.com/jessicabriandebean/portfolio_optimization/issues) page
 2. Read the [Documentation](docs/)
 3. Contact me via [email](mailto:jessicabbean@gmail.com)
 
